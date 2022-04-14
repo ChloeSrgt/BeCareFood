@@ -1,8 +1,6 @@
-/* eslint-disable import/no-unresolved */
 import SearchBar from "@components/SearchBar";
-import "./Home.css";
 
-function Home() {
+function Search() {
   return (
     <div>
       <SearchBar />
@@ -10,4 +8,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Search;

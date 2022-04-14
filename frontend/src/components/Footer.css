@@ -1,0 +1,27 @@
+footer {
+  background-color: var(--dark-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 20px;
+  color: var(--light-beige);
+}
+
+footer img {
+  width: 30px;
+}
+
+footer div {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+/*-----------VERSION TABLETTE-------------------*/
+
+@media screen and (min-width: 600px) {
+  footer div {
+    width: 15%;
+  }
+}
