@@ -7,7 +7,6 @@ import Products from "@pages/Products";
 import Search from "@pages/Search";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import WallPic from "./components/WallPic";
 import "./App.css";
 
 function App() {
