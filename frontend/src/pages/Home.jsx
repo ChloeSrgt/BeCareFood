@@ -6,9 +6,9 @@ import "./Home.css";
 function Home() {
   return (
     <div className="home-container">
+      <WallPic />
       <h1>
         BeCareFood
-        <WallPic />
         <div>
           vous permet de sélectionner vos produits BIO favoris en fonction de
           vos allergies ou de celles de vos enfants.

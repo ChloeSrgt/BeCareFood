@@ -1,30 +1,30 @@
 .search {
-  display: flex;
-  border-radius: 30px;
-  border: solid;
-  width: 90%;
-  margin: auto;
-  padding: 10px;
-
-  margin-bottom: 100%;
+    display: flex;
+    border-radius: 30px;
+    border: solid;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 100%;
 }
 
 .search input {
-  width: 100%;
-  border: none;
-  background: transparent;
-  margin-left: 10px;
-  font-size: 20px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 .search img {
-  height: 40px;
+    height: 40px;
 }
+
 
 /*-----------VERSION TABLETTE-------------------*/
 
 @media screen and (min-width: 600px) {
-  .search {
-    width: 65%;
-  }
+    .search {
+        width: 65%;
+    }
 }
