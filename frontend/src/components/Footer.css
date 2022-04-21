@@ -3,8 +3,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 14px;
+  padding: 30px;
   color: var(--light-beige);
 }
 
@@ -21,7 +21,8 @@ footer div {
 /*-----------VERSION TABLETTE-------------------*/
 
 @media screen and (min-width: 600px) {
-  footer div {
-    width: 15%;
+  footer a {
+    font-size: 25px;
+    gap: 2rm;
   }
 }

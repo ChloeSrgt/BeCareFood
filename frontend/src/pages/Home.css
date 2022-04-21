@@ -1,14 +1,14 @@
 .home-container h1 {
     margin: auto;
-    width: 80%;
+    width: 60%;
     text-align: center;
-    padding: 110px 5px;
-    font-size: 30px;
+    padding: 80px 5px;
+    font-size: 28px;
     color: var(--flashy-orange);
 }
 
 @media screen and (min-width: 600px) {
     .home-container h1 {
-        width: 60%;
+        width: 40%;
     } 
 }
