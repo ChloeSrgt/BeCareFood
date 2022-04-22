@@ -6,8 +6,6 @@ import "./DisplayProduct.css";
 import { Link } from "react-router-dom";
 
 function DisplayProduct({ products }) {
-  /* const findId = products.map(e => e_id);*/
-  //console.log(product.product_name);
   return (
     products && (
       <div className="productCard">
