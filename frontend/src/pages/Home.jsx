@@ -1,10 +1,12 @@
 /* eslint-disable import/no-unresolved */
 import SearchBar from "@components/SearchBar";
+import WallPic from "@components/WallPic";
 import "./Home.css";
 
 function Home() {
   return (
     <div className="home-container">
+      <WallPic />
       <h1>
         BeCareFood
         <div>
