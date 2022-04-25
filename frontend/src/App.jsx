@@ -3,11 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import React from "react";
 import Home from "@pages/Home";
 import Contact from "@pages/Contact";
-import Products from "@pages/Products";
-import Search from "@pages/Search";
+import DisplayProduct from "@components/DisplayProduct";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import "./App.css";
+import ProductName from "@components/ProductName";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/products" element={<DisplayProduct />} />
+        <Route path="/search/:idProduct" element={<ProductName />} />
       </Routes>
       <Footer />
     </>
