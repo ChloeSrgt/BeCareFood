@@ -1,0 +1,14 @@
+.result {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productImg {
+    width: 35%;
+}
+
+.result p {
+    
+}
