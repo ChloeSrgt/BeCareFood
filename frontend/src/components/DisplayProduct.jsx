@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./DisplayProduct.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ProductContext } from "../App";
 
 function DisplayProduct({ products }) {
+  const navigate = useNavigate();
+  const { _setProduct } = useContext(ProductContext);
+  const goToProduct = (product) => {
+    _setProduct(product);
+    navigate(`/search/${product._id}`);
+  };
+
   return (
     products && (
       <div className="productCard">
@@ -14,9 +22,14 @@ function DisplayProduct({ products }) {
               alt="Product"
             />
             <p>
-              <Link to={`/search/${element._id}`}>
+              <a
+                href="#"
+                onClick={() => {
+                  goToProduct(element);
+                }}
+              >
                 {element.brands} - {element.product_name}
-              </Link>
+              </a>
             </p>
           </li>
         ))}

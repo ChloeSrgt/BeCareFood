@@ -7,7 +7,9 @@ function Header() {
       <Link to="/">
         <img src="src/assets/logo.png" alt="logo" />
       </Link>
-      <h1>BeCareFood</h1>
+      <Link to="/">
+        <h1> BeCareFood</h1>{" "}
+      </Link>
     </header>
   );
 }
