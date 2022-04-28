@@ -1,22 +1,35 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import "./SearchBar.css";
 import axios from "axios";
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import DisplayProduct from "./DisplayProduct";
 
 function SearchBar() {
   const [products, setProducts] = React.useState([]);
   const [searchValue, setSearchValue] = React.useState("");
+  const [page, setPage] = useState(1);
 
   const getProduct = () => {
     axios
       .get(
-        `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchValue}+bio&json=true&page=4`
+        `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchValue}+bio&json=true&page=1`
       )
       .then((response) => response.data)
       .then((data) => {
         setProducts(data.products);
+      });
+  };
+
+  const getPage = () => {
+    const newPage = page + 1;
+    setPage(page + 1);
+    axios
+      .get(
+        `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchValue}+bio&json=true&page=${newPage}`
+      )
+      .then((response) => response.data)
+      .then((data) => {
+        setProducts((prod) => [...prod, ...data.products]);
+        // console.log(data.products)
       });
   };
 
@@ -36,6 +49,9 @@ function SearchBar() {
         Get a product
       </button>
       <DisplayProduct products={products} />
+      <button type="button" onClick={getPage}>
+        Voir + de produits
+      </button>
     </div>
   );
 }
