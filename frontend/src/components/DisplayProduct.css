@@ -15,7 +15,7 @@ li {
     color: var(--flashy-orange);
 }
 
-.productImg {
+.productCard .productImg {
     width: 30vw;
     height: 35vw;
 }

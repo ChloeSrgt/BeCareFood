@@ -5,10 +5,19 @@
     align-items: center;
 }
 
-.productImg {
-    width: 35%;
+.imgProduct  {
+    width: 80%;
+}
+.imgProduct img  {
+    object-fit: cover;
+    width: 100%;
 }
 
 .result p {
-    
+text-align: center;
+}
+
+.result h1 {
+    font-size: 25px;
+    margin: 20px 0px 20px 0px;
 }

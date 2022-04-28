@@ -8,7 +8,9 @@ export default function ProductName() {
   return product ? (
     <div className="result">
       <h1>{product.product_name}</h1>
-      <img className="productImg" src={product.image_front_url} alt="Product" />
+      <div className="imgProduct">
+        <img src={product.image_front_url} alt="Product" />
+      </div>
       <p>
         {" "}
         {product.ingredients_text
