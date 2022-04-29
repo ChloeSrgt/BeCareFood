@@ -52,6 +52,14 @@ code {
   pointer-events: none;
 }
 
+input {
+  border-radius: 20px;
+}
+
+textarea {
+  border-radius: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,0 +1,6 @@
+.contact-container h1 {
+  margin-top: 5vh;
+  text-align: center;
+  color: var(--light-green);
+  font-size: 30px;
+}

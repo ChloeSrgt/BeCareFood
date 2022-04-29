@@ -7,18 +7,18 @@ function DisplayProduct({ products }) {
     products && (
       <div className="productCard">
         {products.map((element) => (
-          <li key={element._id}>
-            <img
-              className="productImg"
-              src={element.image_front_small_url}
-              alt="Product"
-            />
-            <p>
-              <Link to={`/search/${element._id}`}>
+          <Link to={`/search/${element._id}`}>
+            <li key={element._id}>
+              <img
+                className="productImg"
+                src={element.image_front_small_url}
+                alt="Product"
+              />
+              <p>
                 {element.brands} - {element.product_name}
-              </Link>
-            </p>
-          </li>
+              </p>
+            </li>
+          </Link>
         ))}
       </div>
     )

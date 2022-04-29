@@ -13,7 +13,7 @@ function Footer() {
           <img src="src/assets/insta.png" alt="insta" />
         </a>
       </div>
-      <a href="tel:0637867498">06.37.86.74.98</a>
+      <a href="tel:0637867498">06.37.14.74.98</a>
     </footer>
   );
 }
