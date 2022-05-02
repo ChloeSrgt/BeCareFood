@@ -35,7 +35,6 @@ function SearchBar() {
 
   return (
     <div className="App">
-      <h1>Produits</h1>
       <form className="search">
         <input
           type="text"

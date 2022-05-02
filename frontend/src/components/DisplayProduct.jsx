@@ -1,13 +1,14 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import "./DisplayProduct.css";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../App";
+import ProductContext from "../context";
 
 function DisplayProduct({ products }) {
   const navigate = useNavigate();
-  const { _setProduct } = useContext(ProductContext);
+  const { setProduct } = useContext(ProductContext);
   const goToProduct = (product) => {
-    _setProduct(product);
+    setProduct(product);
     navigate(`/search/${product._id}`);
   };
 

@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { ProductContext } from "../App";
+import ProductContext from "../context";
 import "./ProductName.css";
+
 export default function ProductName() {
   const { product } = useContext(ProductContext);
 
@@ -20,6 +21,7 @@ export default function ProductName() {
       {product.nutriscore_grade && (
         <img
           src={`https://static.openfoodfacts.org/images/attributes/nutriscore-${product.nutriscore_grade}.svg`}
+          alt="Nutriscore"
         />
       )}
     </div>
