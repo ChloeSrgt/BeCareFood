@@ -6,30 +6,30 @@
   height: 65vh;
 }
 
-label {
+.contact label {
   margin-bottom: 0.5vh;
 }
 
-input {
+.contact input {
   width: 80%;
   height: 4vh;
   margin-bottom: 3vh;
   padding-left: 20px;
 }
 
-textarea {
+.contact textarea {
   width: 80%;
   height: 20vh;
   margin-bottom: 3vh;
   padding-left: 20px;
 }
 
-input ::placeholder {
+.contact input ::placeholder {
   color: grey;
   opacity: 1;
 }
 
-textarea ::placeholder {
+.contact textarea ::placeholder {
   color: grey;
   opacity: 1;
 }

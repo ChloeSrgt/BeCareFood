@@ -1,5 +1,5 @@
 import "./WallPic.css";
-import wall from "@assets/wall.jpg";
+import wall from "../assets/wall.jpg";
 
 export default function WallPic() {
   return (

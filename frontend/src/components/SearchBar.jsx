@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import DisplayProduct from "@components/DisplayProduct";
 
 function SearchBar() {
-  const [products, setProducts] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [products, setProducts] = React.useState([]);
+  const [searchValue, setSearchValue] = React.useState("");
   const [page, setPage] = useState(1);
 
   const getProduct = () => {
@@ -29,12 +29,12 @@ function SearchBar() {
       .then((response) => response.data)
       .then((data) => {
         setProducts((prod) => [...prod, ...data.products]);
+        // console.log(data.products)
       });
   };
 
   return (
     <div className="App">
-      <h1>Produits</h1>
       <form className="search">
         <input
           type="text"
