@@ -1,12 +1,12 @@
-import "./SearchBar.css";
 import axios from "axios";
-import React, { useState } from "react";
-import DisplayProduct from "@components/DisplayProduct";
+import "./SearchBar.css";
+// import { getProduct } from "@components/AppelAPI";
+import { useContext } from "react";
+import ProductContext from "../contexts/ProductContext";
 
 function SearchBar() {
-  const [products, setProducts] = React.useState([]);
-  const [searchValue, setSearchValue] = React.useState("");
-  const [page, setPage] = useState(1);
+  const { setProducts, searchValue, setSearchValue } =
+    useContext(ProductContext);
 
   const getProduct = () => {
     axios
@@ -16,20 +16,6 @@ function SearchBar() {
       .then((response) => response.data)
       .then((data) => {
         setProducts(data.products);
-      });
-  };
-
-  const getPage = () => {
-    const newPage = page + 1;
-    setPage(page + 1);
-    axios
-      .get(
-        `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchValue}+bio&json=true&page=${newPage}`
-      )
-      .then((response) => response.data)
-      .then((data) => {
-        setProducts((prod) => [...prod, ...data.products]);
-        // console.log(data.products)
       });
   };
 
@@ -46,10 +32,6 @@ function SearchBar() {
       </form>
       <button type="button" onClick={getProduct}>
         Get a product
-      </button>
-      <DisplayProduct products={products} />
-      <button type="button" onClick={getPage}>
-        Voir + de produits
       </button>
     </div>
   );

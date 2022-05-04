@@ -1,26 +1,37 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable import/no-unresolved */
 import { Route, Routes } from "react-router-dom";
-import React, { useMemo } from "react";
+import React, { useState } from "react";
 import Home from "@pages/Home";
 import Contact from "@pages/Contact";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import "./App.css";
-import ProductName from "@components/ProductName";
-import ProductContext from "./context";
+import ProductDetail from "@components/ProductDetail";
+import ProductContext from "./contexts/ProductContext";
 
 function App() {
-  const [product, setProduct] = React.useState(null);
-  const value = useMemo(() => ({ product, setProduct }), [product, setProduct]);
+  const [products, setProducts] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [oneProduct, setOneProduct] = useState();
 
   return (
     <>
       <Header />
-      <ProductContext.Provider value={value}>
+      <ProductContext.Provider
+        value={{
+          products,
+          setProducts,
+          searchValue,
+          setSearchValue,
+          oneProduct,
+          setOneProduct,
+        }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/search/:idProduct" element={<ProductName />} />
+          <Route path="/search/:idProduct" element={<ProductDetail />} />
         </Routes>
       </ProductContext.Provider>
       <Footer />
