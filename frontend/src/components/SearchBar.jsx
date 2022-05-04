@@ -1,18 +1,17 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import "./SearchBar.css";
 import axios from "axios";
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
-import DisplayProduct from "./DisplayProduct";
+import "./SearchBar.css";
+// import { getProduct } from "@components/AppelAPI";
+import { useContext } from "react";
+import ProductContext from "../contexts/ProductContext";
 
 function SearchBar() {
-  const [products, setProducts] = React.useState([]);
-  const [searchValue, setSearchValue] = React.useState("");
+  const { setProducts, searchValue, setSearchValue } =
+    useContext(ProductContext);
 
   const getProduct = () => {
     axios
       .get(
-        `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchValue}+bio&json=true&page=4`
+        `https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchValue}+bio&json=true&page=1`
       )
       .then((response) => response.data)
       .then((data) => {
@@ -22,7 +21,6 @@ function SearchBar() {
 
   return (
     <div className="App">
-      <h1>Produits</h1>
       <form className="search">
         <input
           type="text"
@@ -35,7 +33,6 @@ function SearchBar() {
       <button type="button" onClick={getProduct}>
         Get a product
       </button>
-      <DisplayProduct products={products} />
     </div>
   );
 }

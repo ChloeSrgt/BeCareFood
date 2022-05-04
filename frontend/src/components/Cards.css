@@ -1,0 +1,21 @@
+.productCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+  width: 45vw;
+  height: 58vw;
+  margin-bottom: 6vw;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--light-beige);
+  color: var(--flashy-orange);
+}
+
+.productCard .productImg {
+  width: 30vw;
+  height: 35vw;
+}
