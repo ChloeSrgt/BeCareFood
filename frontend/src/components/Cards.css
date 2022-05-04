@@ -4,6 +4,13 @@
   justify-content: space-around;
 }
 
+.productCard .goTop {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+}
+
 li {
   list-style-type: none;
   width: 45vw;
