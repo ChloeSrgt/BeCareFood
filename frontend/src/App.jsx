@@ -1,31 +1,37 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable import/no-unresolved */
 import { Route, Routes } from "react-router-dom";
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import Home from "@pages/Home";
 import Contact from "@pages/Contact";
-import DisplayProduct from "@components/DisplayProduct";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import "./App.css";
-import ProductName from "@components/ProductName";
-
-export const ProductContext = createContext(null);
+import ProductDetail from "@components/ProductDetail";
+import ProductContext from "./contexts/ProductContext";
 
 function App() {
-  const [product, setProduct] = React.useState(null);
-  const _setProduct = (product) => {
-    setProduct(product);
-  };
+  const [products, setProducts] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [oneProduct, setOneProduct] = useState();
 
   return (
     <>
       <Header />
-      <ProductContext.Provider value={{ product, _setProduct }}>
+      <ProductContext.Provider
+        value={{
+          products,
+          setProducts,
+          searchValue,
+          setSearchValue,
+          oneProduct,
+          setOneProduct,
+        }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/products" element={<DisplayProduct />} />
-          <Route path="/search/:idProduct" element={<ProductName />} />
+          <Route path="/search/:idProduct" element={<ProductDetail />} />
         </Routes>
       </ProductContext.Provider>
       <Footer />
