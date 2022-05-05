@@ -44,13 +44,8 @@ function SearchBar() {
         />
         <img src="src/assets/search.png" alt="loupe" onClick={getProduct} />
       </form>
-
-      <button type="button" onClick={getProduct}>
-        Get a product
-      </button>
       {isNotFound && <NotFound />}
       {isLoading && <Loading />}
-
     </div>
   );
 }

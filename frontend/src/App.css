@@ -91,12 +91,3 @@ textarea {
   }
 }
 
-button {
-  font-size: calc(10px + 2vmin);
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}

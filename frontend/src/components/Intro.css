@@ -1,7 +1,3 @@
-.intro {
-
-}
-
 .BeCaretitle {
     font-size: 32px;
     color: var(--flashy-orange);
@@ -15,3 +11,15 @@
     margin-bottom: 7vw;
     text-align: center;
 }
+
+/*-----------VERSION TABLETTE-------------------*/
+
+@media screen and (min-width: 768px) {
+    .BeCaretitle {
+      font-size: 3.5rem;
+  }
+
+  .infotext {
+    font-size: 2rem;
+  }
+  }

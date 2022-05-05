@@ -22,8 +22,16 @@
 
 /*-----------VERSION TABLETTE-------------------*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .search {
-    width: 65%;
+    width: 65vw;
+    height: 10vw;
+    border-radius: 38px;
   }
+
+  .search img {
+    height: 52px;
+    margin-top: 2px;
 }
+  }
+
