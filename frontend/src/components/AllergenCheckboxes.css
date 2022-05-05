@@ -49,8 +49,10 @@
 
 /-----------VERSION TABLETTE-------------------/
 
+
 @media screen and (min-width: 768px) {
   .textAllergic {
     font-size: 1.5rem;
   }
 }
+

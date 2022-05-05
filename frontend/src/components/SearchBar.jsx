@@ -46,7 +46,6 @@ function SearchBar() {
       </form>
       {isNotFound && <NotFound />}
       {isLoading && <Loading />}
-
     </div>
   );
 }
