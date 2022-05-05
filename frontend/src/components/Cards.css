@@ -11,12 +11,15 @@
   width: 50px;
 }
 
-li {
+.productCard li {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 45vw;
-  height: 58vw;
+  height: 64vw;
   margin-bottom: 6vw;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 8px;
   background-color: var(--light-beige);
   color: var(--flashy-orange);

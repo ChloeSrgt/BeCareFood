@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
+import "./MoreProductsButton.css";
 import Loading from "./Loading";
 
 function MoreProductsButton() {
@@ -26,7 +27,7 @@ function MoreProductsButton() {
 
   return (
     <div>
-      <button type="button" onClick={getPage}>
+      <button className="morebutton" type="button" onClick={getPage}>
         Voir + de produits
       </button>
       {isLoading && <Loading />}
