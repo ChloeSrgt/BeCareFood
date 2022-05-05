@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import axios from "axios";
 import "./SearchBar.css";
 // import { getProduct } from "@components/AppelAPI";
@@ -28,11 +30,8 @@ function SearchBar() {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         />
-        <img src="src/assets/search.png" alt="loupe" />
+        <img src="src/assets/search.png" alt="loupe" onClick={getProduct} />
       </form>
-      <button type="button" onClick={getProduct}>
-        Get a product
-      </button>
     </div>
   );
 }

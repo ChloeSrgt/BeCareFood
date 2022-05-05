@@ -4,11 +4,12 @@ import { allergens } from "../data/Allergens";
 
 function AllergenCheckbox() {
   return (
-    <div>
+    <div className="allcheckboxes">
       {allergens &&
         allergens.map((allergen, index) => (
           <li key={allergen.name}>
             <input
+              className="checkbox"
               type="checkbox"
               id={`${index}`}
               name={allergen.name}

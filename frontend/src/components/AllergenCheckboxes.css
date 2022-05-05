@@ -4,6 +4,23 @@
   justify-content: center;
 }
 
+.allcheckboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-top: 6px;
+}
+
+.checkbox {
+  width: 30px;
+  height: 20px;
+}
+
+.checkbox:checked {
+  background-color: black
+}
+
 .allergenCheckboxOn {
   display: flex;
   flex-wrap: wrap;
