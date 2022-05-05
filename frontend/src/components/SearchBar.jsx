@@ -50,7 +50,6 @@ function SearchBar() {
       </button>
       {isNotFound && <NotFound />}
       {isLoading && <Loading />}
-
     </div>
   );
 }
