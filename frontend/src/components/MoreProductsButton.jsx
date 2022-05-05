@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
 import "./MoreProductsButton.css";
 import Loading from "./Loading";
+import "./MoreProductsButton.css";
 
 function MoreProductsButton() {
   const { setProducts, searchValue } = useContext(ProductContext);

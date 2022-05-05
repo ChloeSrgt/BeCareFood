@@ -12,6 +12,7 @@ export default function ProductDetail() {
       <div className="imgProduct">
         <img src={oneProduct.image_front_url} alt="Product" />
       </div>
+      <h1 className="ingredient"> Ingrédients </h1>
       <p
         dangerouslySetInnerHTML={{
           __html:
