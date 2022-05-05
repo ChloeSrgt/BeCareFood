@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import axios from "axios";
 import "./SearchBar.css";
 // import { getProduct } from "@components/AppelAPI";
@@ -5,7 +7,7 @@ import { useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
 
 function SearchBar() {
-  const { setProducts, searchValue, setSearchValue } =
+  const { setProducts, searchValue, setSearchValue, setFilteredProducts } =
     useContext(ProductContext);
 
   const getProduct = () => {
@@ -16,6 +18,7 @@ function SearchBar() {
       .then((response) => response.data)
       .then((data) => {
         setProducts(data.products);
+        setFilteredProducts(data.products);
       });
   };
 
@@ -27,8 +30,14 @@ function SearchBar() {
           placeholder="Rechercher..."
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              getProduct();
+            }
+          }}
         />
-        <img src="src/assets/search.png" alt="loupe" />
+        <img src="src/assets/search.png" alt="loupe" onClick={getProduct} />
       </form>
       <button type="button" onClick={getProduct}>
         Get a product

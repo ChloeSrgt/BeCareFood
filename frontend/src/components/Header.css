@@ -1,5 +1,5 @@
 header img {
-  width: 90px;
+  width: 70px;
 }
 
 header {
@@ -18,11 +18,18 @@ header h1 {
   font-size: 38px;
 }
 
-/*-----------VERSION TABLETTE-------------------*/
-
-@media screen and (min-width: 600px) {
+/-----------VERSION
+  TABLETTE-------------------/
+  @media
+  screen
+  and
+  (min-width: 600px) {
   header {
     flex-direction: column;
     margin-right: none;
+  }
+
+  header img {
+    width: 90px;
   }
 }

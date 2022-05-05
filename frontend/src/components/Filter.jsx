@@ -3,12 +3,13 @@ import { useState } from "react";
 import "./AllergenCheckboxes.css";
 import AllergenCheckboxesHeader from "./AllergenCheckboxesHeader";
 import AllergenCheckbox from "./AllergenCheckbox";
+import { allergens } from "../data/Allergens";
 
 // Filter : Header + Checkboxes
 function Filter() {
   // State to show or to hide checkboxes
   const [showCheckboxes, setShowCheckboxes] = useState();
-  const [userFilter, setUserFilter] = useState([]);
+  // const { userFilter, setUserFilter } = useContext(ProductContext);
 
   function handleCheckboxes() {
     setShowCheckboxes(!showCheckboxes);
@@ -25,10 +26,11 @@ function Filter() {
           showCheckboxes ? "allergenCheckboxOn" : "allergenCheckboxOff"
         }
       >
-        <AllergenCheckbox
-          userFilter={userFilter}
-          setUserFilter={setUserFilter}
-        />
+        <div>
+          {allergens.map((element) => (
+            <AllergenCheckbox key={element.id} allergen={element} />
+          ))}
+        </div>
       </ul>
     </>
   );

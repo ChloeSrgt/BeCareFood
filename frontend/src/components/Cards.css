@@ -4,7 +4,7 @@
   justify-content: space-around;
 }
 
-li {
+.productCard li {
   list-style-type: none;
   width: 45vw;
   height: 58vw;

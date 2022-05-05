@@ -12,8 +12,10 @@ import ProductContext from "./contexts/ProductContext";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(products);
   const [searchValue, setSearchValue] = useState("");
   const [oneProduct, setOneProduct] = useState();
+  const [userFilter, setUserFilter] = useState([]);
 
   return (
     <>
@@ -26,6 +28,10 @@ function App() {
           setSearchValue,
           oneProduct,
           setOneProduct,
+          userFilter,
+          setUserFilter,
+          filteredProducts,
+          setFilteredProducts,
         }}
       >
         <Routes>
