@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductContext from "../contexts/ProductContext";
+import "./Card.css";
 
 export default function Card({ product }) {
   const { setOneProduct } = useContext(ProductContext);
@@ -13,7 +14,7 @@ export default function Card({ product }) {
   };
 
   return (
-    <li>
+    <li className="ficheProd">
       <img
         className="productImg"
         src={product.image_front_small_url}
@@ -26,7 +27,10 @@ export default function Card({ product }) {
             goToProduct(product);
           }}
         >
-          {product.brands} - {product.product_name}
+          <p className="infoprod">
+            {" "}
+            {product.brands} - {product.product_name}
+          </p>
         </a>
       </p>
     </li>

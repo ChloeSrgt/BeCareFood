@@ -1,7 +1,11 @@
 import axios from "axios";
 import { useState, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
+<<<<<<< HEAD
 import Loading from "./Loading";
+=======
+import "./MoreProductsButton.css";
+>>>>>>> 9c03da6 (CSS des checkboxes + bouton bas de page + divers)
 
 function MoreProductsButton() {
   const { setProducts, searchValue } = useContext(ProductContext);
@@ -26,7 +30,7 @@ function MoreProductsButton() {
 
   return (
     <div>
-      <button type="button" onClick={getPage}>
+      <button className="morebutton" type="button" onClick={getPage}>
         Voir + de produits
       </button>
       {isLoading && <Loading />}
