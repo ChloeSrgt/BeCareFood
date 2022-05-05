@@ -3,12 +3,12 @@
     color: var(--flashy-orange);
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin: 20px 10px 4px 10px;
 }
 
 .infotext {
     font-size: 18px;
-    margin-bottom: 7vw;
+    margin: 0px 26px 40px 26px;
     text-align: center;
 }
 
