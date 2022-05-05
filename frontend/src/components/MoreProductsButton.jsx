@@ -1,11 +1,8 @@
 import axios from "axios";
 import { useState, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
-<<<<<<< HEAD
 import Loading from "./Loading";
-=======
 import "./MoreProductsButton.css";
->>>>>>> 9c03da6 (CSS des checkboxes + bouton bas de page + divers)
 
 function MoreProductsButton() {
   const { setProducts, searchValue } = useContext(ProductContext);

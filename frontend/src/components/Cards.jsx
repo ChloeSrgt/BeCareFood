@@ -1,4 +1,3 @@
-npm/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import "./Cards.css";

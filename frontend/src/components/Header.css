@@ -1,5 +1,5 @@
 header img {
-  width: 90px;
+  width: 70px;
 }
 
 header {
@@ -24,5 +24,9 @@ header h1 {
   header {
     flex-direction: column;
     margin-right: none;
+  }
+
+  header img {
+    width: 90px;
   }
 }
