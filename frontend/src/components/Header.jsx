@@ -1,13 +1,17 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import ProductContext from "../contexts/ProductContext";
 import "./Header.css";
 
 function Header() {
+  const { setProducts } = useContext(ProductContext);
+
   return (
     <header>
-      <Link to="/">
+      <Link to="/" onClick={() => setProducts([])}>
         <img src="src/assets/logo.png" alt="logo" />
       </Link>
-      <Link to="/">
+      <Link to="/" onClick={() => setProducts([])}>
         <h1> BeCareFood</h1>{" "}
       </Link>
     </header>

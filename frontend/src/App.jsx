@@ -17,7 +17,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <ProductContext.Provider
         value={{
           products,
@@ -28,6 +27,7 @@ function App() {
           setOneProduct,
         }}
       >
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
