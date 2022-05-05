@@ -28,7 +28,7 @@
 }
 
 .checkbox:checked {
-  background-color: black
+  background-color: black;
 }
 
 .allergenCheckboxOn {
