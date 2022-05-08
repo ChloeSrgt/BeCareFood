@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
-import "./MoreProductsButton.css";
 import Loading from "./Loading";
 import "./MoreProductsButton.css";
 
