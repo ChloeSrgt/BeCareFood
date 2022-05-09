@@ -1,23 +1,32 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from "react";
-import arrow from "../assets/arrow.png";
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { useState, useEffect } from "react";
+import { FaAngleUp } from "react-icons/fa";
+import "./ArrowTop.css";
 
 function ArrowTop() {
-  return (
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-    <img
-      src={arrow}
-      className="goTop"
-      alt="goTop"
-      onClick={() =>
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        })
+  const [showTopBtn, setShowTopBtn] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
       }
-    />
+    });
+  }, []);
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  return (
+    <div className="top-to-btm">
+      {" "}
+      {showTopBtn && (
+        <FaAngleUp className="icon-position icon-style" onClick={goToTop} />
+      )}{" "}
+    </div>
   );
 }
-
 export default ArrowTop;
