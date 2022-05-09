@@ -4,7 +4,6 @@ import "./Cards.css";
 // eslint-disable-next-line import/no-unresolved
 import Card from "@components/Card";
 import ProductContext from "../contexts/ProductContext";
-import MoreProductsButton from "./MoreProductsButton";
 import ArrowTop from "./ArrowTop";
 
 function Cards() {
@@ -17,7 +16,7 @@ function Cards() {
           <Card key={element._id} product={element} />
         ))}
 
-        <MoreProductsButton />
+        {products.length > 0 && <MoreProductsButton />}
         {products.length > 0 && <ArrowTop />}
       </div>
     )
