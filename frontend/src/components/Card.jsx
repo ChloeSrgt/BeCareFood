@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
@@ -14,24 +15,23 @@ export default function Card({ product }) {
   };
 
   return (
-    <li className="ficheProd">
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
+    <li
+      className="ficheProd"
+      onClick={() => {
+        goToProduct(product);
+      }}
+    >
       <img
         className="productImg"
         src={product.image_front_small_url}
         alt="Product"
       />
       <p>
-        <a
-          href="#"
-          onClick={() => {
-            goToProduct(product);
-          }}
-        >
-          <p className="infoprod">
-            {" "}
-            {product.brands} - {product.product_name}
-          </p>
-        </a>
+        <p className="infoprod">
+          {" "}
+          {product.brands} - {product.product_name}
+        </p>
       </p>
     </li>
   );
