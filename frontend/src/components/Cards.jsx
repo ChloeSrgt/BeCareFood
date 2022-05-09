@@ -11,13 +11,10 @@ function Cards() {
     useContext(ProductContext);
 
   React.useEffect(() => {
-    //setFilteredProducts(products);
-    //console.log(filteredProducts);
     const withoutAllergens = filteredProducts.filter((p) => {
       let hasAllergen = false;
 
       if (userFilter.length > 0 && p.ingredients_text_with_allergens_fr) {
-        //console.log(p.ingredients_text_with_allergens_fr);
         userFilter.forEach((a) => {
           hasAllergen = hasAllergen || p.ingredients_text.includes(a);
         });
@@ -27,7 +24,6 @@ function Cards() {
     });
 
     setFilteredProducts(withoutAllergens);
-    console.log("cards: "+filteredProducts);
   }, [userFilter]);
 
   return (

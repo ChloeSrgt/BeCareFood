@@ -16,7 +16,6 @@ function App() {
   const [searchValue, setSearchValue] = useState("");
   const [oneProduct, setOneProduct] = useState();
   const [userFilter, setUserFilter] = useState([]);
-  //console.log("consoleApp: "+filteredProducts);
 
   return (
     <>
