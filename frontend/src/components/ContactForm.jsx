@@ -7,6 +7,11 @@ import "./ContactForm.css";
 export default function ContactForm() {
   const [isUserClick, setIsUserClick] = useState(false);
 
+  function handleClick(e) {
+    e.preventDefault();
+    setIsUserClick(!isUserClick);
+  }
+
   return (
     <div className="contact">
       <form name="contact" method="post">
@@ -45,7 +50,7 @@ export default function ContactForm() {
           className="contactButton"
           type="submit"
           value="submit"
-          onClick={() => setIsUserClick(true)}
+          onClick={handleClick}
         >
           Envoyer
         </button>
