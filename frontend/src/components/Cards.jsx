@@ -3,8 +3,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext } from "react";
 import "./Cards.css";
+// eslint-disable-next-line import/no-unresolved
 import Card from "@components/Card";
 import ProductContext from "../contexts/ProductContext";
+import ArrowTop from "./ArrowTop";
 
 function Cards() {
   const { filteredProducts, setFilteredProducts, userFilter } =
@@ -32,6 +34,9 @@ function Cards() {
         {filteredProducts.map((element) => (
           <Card key={element._id} product={element} chosenAllergen={false} />
         ))}
+
+        {products.length > 0 && <MoreProductsButton />}
+        {products.length > 0 && <ArrowTop />}
       </div>
     )
   );

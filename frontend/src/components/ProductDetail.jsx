@@ -12,12 +12,14 @@ export default function ProductDetail() {
       <div className="imgProduct">
         <img src={oneProduct.image_front_url} alt="Product" />
       </div>
-      <p>
-        {" "}
-        {oneProduct.ingredients_text
-          ? oneProduct.ingredients_text
-          : "Pas d'ingrédient communiqué"}
-      </p>
+      <h1 className="ingredient"> Ingrédients </h1>
+      <p
+        dangerouslySetInnerHTML={{
+          __html:
+            oneProduct.ingredients_text_with_allergens_fr ??
+            "Pas d'ingrédient communiqué",
+        }}
+      />
       {oneProduct.nutriscore_grade && (
         <img
           src={`https://static.openfoodfacts.org/images/attributes/nutriscore-${oneProduct.nutriscore_grade}.svg`}

@@ -1,30 +1,61 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from "react";
+import { useState } from "react";
+// eslint-disable-next-line import/no-unresolved
+import ContactMessage from "@components/ContactMessage";
 import "./ContactForm.css";
 
-function ContactForm() {
-  function handleSubmit(e) {
+export default function ContactForm() {
+  const [isUserClick, setIsUserClick] = useState(false);
+
+  function handleClick(e) {
     e.preventDefault();
-    alert("Votre message a été envoyé !");
+    setIsUserClick(!isUserClick);
   }
+
   return (
     <div className="contact">
-      <form onSubmit={handleSubmit} name="contact" method="post">
+      <form name="contact" method="post">
         <label htmlFor="name">Prénom, nom *</label>
-        <input type="texte" name="name" placeholder="Champ obligatoire" />
+        <input
+          id="name"
+          type="texte"
+          name="name"
+          placeholder="Champ obligatoire"
+        />
 
         <label htmlFor="email">Email *</label>
-        <input type="email" name="email" placeholder="Champ obligatoire" />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Champ obligatoire"
+        />
 
         <label htmlFor="objet">Objet *</label>
-        <input type="objet" name="objet" placeholder="Champ obligatoire" />
+        <input
+          id="objet"
+          type="objet"
+          name="objet"
+          placeholder="Champ obligatoire"
+        />
 
         <label htmlFor="message">Message</label>
-        <textarea name="message" placeholder="Ecrire votre message ici" />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Ecrire votre message ici"
+        />
 
-        <button type="submit">Envoyer </button>
+        <button
+          className="contactButton"
+          type="submit"
+          value="submit"
+          onClick={handleClick}
+        >
+          Envoyer
+        </button>
+        {isUserClick && <ContactMessage />}
       </form>
     </div>
   );
 }
-export default ContactForm;
