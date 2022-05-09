@@ -2,6 +2,7 @@ import Filter from "@components/Filter";
 import Cards from "@components/Cards";
 
 function Wrap() {
+
   return (
     <div>
       <Filter />

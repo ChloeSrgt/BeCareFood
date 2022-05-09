@@ -12,10 +12,11 @@ import ProductContext from "./contexts/ProductContext";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(products);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [oneProduct, setOneProduct] = useState();
   const [userFilter, setUserFilter] = useState([]);
+  //console.log("consoleApp: "+filteredProducts);
 
   return (
     <>

@@ -4,8 +4,10 @@ import ProductContext from "../contexts/ProductContext";
 // import { allergens } from "../data/Allergens";
 
 function AllergenCheckbox({ allergen }) {
-  const { setUserFilter } = useContext(ProductContext);
+  const { setUserFilter, products, setFilteredProducts } =
+    useContext(ProductContext);
   function handleChange(e) {
+    setFilteredProducts(products);
     if (e.target.checked) {
       setUserFilter((f) => [...f, e.target.value]);
     } else {
