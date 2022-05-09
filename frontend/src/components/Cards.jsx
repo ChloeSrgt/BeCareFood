@@ -6,7 +6,6 @@ import Card from "@components/Card";
 import ProductContext from "../contexts/ProductContext";
 import MoreProductsButton from "./MoreProductsButton";
 import ArrowTop from "./ArrowTop";
-import MoreProductsButton from "./MoreProductsButton";
 
 function Cards() {
   const { products } = useContext(ProductContext);
@@ -20,7 +19,6 @@ function Cards() {
 
         <MoreProductsButton />
         {products.length > 0 && <ArrowTop />}
-        <MoreProductsButton />
       </div>
     )
   );

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from "react";
+// eslint-disable-next-line import/no-unresolved
 import ContactMessage from "@components/ContactMessage";
 import "./ContactForm.css";
 
@@ -41,6 +42,7 @@ export default function ContactForm() {
         />
 
         <button
+          className="contactButton"
           type="submit"
           value="submit"
           onClick={() => setIsUserClick(true)}
