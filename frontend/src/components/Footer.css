@@ -18,14 +18,22 @@ footer div {
   justify-content: space-around;
 }
 
+.basdepage {
+  margin-top: 20vw;
+  width: 100%;
+}
+
 /*-----------VERSION TABLETTE-------------------*/
 
 @media screen and (min-width: 768px) {
   footer div {
     width: 15%;
   }
-
   footer {
     font-size: 25px;
+  }
+  .basdepage {
+    margin-top: 20vw;
+    width: 100%;
   }
 }
