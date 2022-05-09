@@ -20,7 +20,7 @@ header h1 {
 
 /*-----------VERSION TABLETTE-------------------*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   header {
     flex-direction: column;
     margin-right: none;
