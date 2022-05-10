@@ -29,5 +29,4 @@ function AllergenCheckbox({ allergen }) {
     </li>
   );
 }
-
 export default AllergenCheckbox;

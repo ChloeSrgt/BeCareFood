@@ -25,6 +25,7 @@ function Cards() {
               .replace("œ", "oe")
               .toLowerCase()
               .includes(a.toLowerCase());
+
         });
       }
       console.log(hasAllergen);
