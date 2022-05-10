@@ -1,7 +1,6 @@
 .infoprod {
-  width: 30vw;
   text-align: center;
-}
-
-.ficheProd {
+  inline-size: 40vw;
+  word-break: break-word;
+  hyphens: manual;
 }
