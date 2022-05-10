@@ -31,6 +31,12 @@
   margin-top: 6vw;
 }
 
+.moreProductsButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 /*-----------VERSION TABLETTE-------------------*/
 
 @media screen and (min-width: 768px) {

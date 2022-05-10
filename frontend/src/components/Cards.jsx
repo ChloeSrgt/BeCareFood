@@ -41,8 +41,9 @@ function Cards() {
         {filteredProducts.map((element) => (
           <Card key={element._id} product={element} chosenAllergen={false} />
         ))}
-
-        {products.length > 0 && <MoreProductsButton />}
+        <div className="moreProductsButton">
+          {products.length > 0 && <MoreProductsButton />}
+        </div>
         {products.length > 0 && <ArrowTop />}
       </div>
     )
