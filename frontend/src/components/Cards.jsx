@@ -21,10 +21,11 @@ function Cards() {
         userFilter.forEach((a) => {
           hasAllergen =
             hasAllergen ||
-            p.ingredients_text
+            p.ingredients_text_with_allergens_fr
               .replace("œ", "oe")
               .toLowerCase()
               .includes(a.toLowerCase());
+
         });
       }
       console.log(hasAllergen);
