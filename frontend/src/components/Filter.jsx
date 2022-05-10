@@ -9,7 +9,6 @@ import { allergens } from "../data/Allergens";
 function Filter() {
   // State to show or to hide checkboxes
   const [showCheckboxes, setShowCheckboxes] = useState();
-  // const { userFilter, setUserFilter } = useContext(ProductContext);
 
   function handleCheckboxes() {
     setShowCheckboxes(!showCheckboxes);

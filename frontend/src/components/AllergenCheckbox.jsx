@@ -3,8 +3,6 @@ import { React, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
 import "./AllergenCheckboxes.css";
 
-// import { allergens } from "../data/Allergens";
-
 function AllergenCheckbox({ allergen }) {
   const { setUserFilter, products, setFilteredProducts } =
     useContext(ProductContext);
@@ -14,13 +12,8 @@ function AllergenCheckbox({ allergen }) {
       setUserFilter((f) => [...f, e.target.value]);
     } else {
       setUserFilter((f) => f.filter((element) => element !== e.target.value));
-      // console.log(userFilter);
     }
   }
-
-  /* function addUserFilter() {
-    setUserFilter((filt) => [...filt, ...allergens.name]);
-  } */
 
   return (
     <li key={allergen.id}>
