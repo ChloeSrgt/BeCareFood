@@ -1,25 +1,32 @@
 /* eslint-disable react/no-array-index-key */
-import React from "react";
-import { allergens } from "../data/Allergens";
+import { React, useContext } from "react";
+import ProductContext from "../contexts/ProductContext";
 import "./AllergenCheckboxes.css";
 
-function AllergenCheckbox() {
+function AllergenCheckbox({ allergen }) {
+  const { setUserFilter, products, setFilteredProducts } =
+    useContext(ProductContext);
+  function handleChange(e) {
+    setFilteredProducts(products);
+    if (e.target.checked) {
+      setUserFilter((f) => [...f, e.target.value]);
+    } else {
+      setUserFilter((f) => f.filter((element) => element !== e.target.value));
+    }
+  }
+
   return (
-    <div className="allcheckboxes">
-      {allergens &&
-        allergens.map((allergen, index) => (
-          <li key={allergen.name}>
-            <input
-              className="checkbox"
-              type="checkbox"
-              id={`${index}`}
-              name={allergen.name}
-              value={allergen.name}
-            />
-            <label htmlFor={`${index}`}>{allergen.name}</label>
-          </li>
-        ))}
-    </div>
+    <li key={allergen.id}>
+      <input
+        className="checkbox"
+        type="checkbox"
+        id={`${allergen.id}`}
+        name={allergen.name}
+        value={allergen.searchTerm}
+        onChange={(e) => handleChange(e)}
+      />
+      <label htmlFor={`${allergen.id}`}>{allergen.name}</label>
+    </li>
   );
 }
 

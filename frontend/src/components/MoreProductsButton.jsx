@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import "./MoreProductsButton.css";
 
 function MoreProductsButton() {
-  const { setProducts, searchValue } = useContext(ProductContext);
+  const { searchValue, setProducts } = useContext(ProductContext);
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
