@@ -24,7 +24,8 @@ function Cards() {
             p.ingredients_text_with_allergens_fr
               .replace("œ", "oe")
               .toLowerCase()
-              .includes(a);
+              .includes(a.toLowerCase());
+
         });
       }
       console.log(hasAllergen);
