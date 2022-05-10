@@ -11,12 +11,12 @@ import NotFound from "./NotFound";
 function SearchBar() {
   const [isLoading, setIsLoading] = useState(false);
   const [isNotFound, setIsNotFound] = useState(false);
-  const { setProducts, searchValue, setSearchValue } =
+  const { setProducts, searchValue, setSearchValue, setFilteredProducts } =
     useContext(ProductContext);
 
   const getProduct = () => {
     setIsLoading(true);
-    setProducts([]);
+    // setProducts([]);
     setIsNotFound(false);
 
     axios

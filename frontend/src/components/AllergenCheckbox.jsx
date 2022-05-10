@@ -1,6 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import { React, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
+import "./AllergenCheckboxes.css";
+
 // import { allergens } from "../data/Allergens";
 
 function AllergenCheckbox({ allergen }) {

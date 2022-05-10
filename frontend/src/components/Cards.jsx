@@ -5,11 +5,12 @@ import React, { useContext } from "react";
 import "./Cards.css";
 // eslint-disable-next-line import/no-unresolved
 import Card from "@components/Card";
+import MoreProductsButton from "@components/MoreProductsButton";
 import ProductContext from "../contexts/ProductContext";
 import ArrowTop from "./ArrowTop";
 
 function Cards() {
-  const { filteredProducts, setFilteredProducts, userFilter } =
+  const { filteredProducts, setFilteredProducts, userFilter, products } =
     useContext(ProductContext);
 
   React.useEffect(() => {
@@ -21,12 +22,13 @@ function Cards() {
           hasAllergen = hasAllergen || p.ingredients_text.includes(a);
         });
       }
+      console.log(hasAllergen);
 
       return !hasAllergen;
     });
 
     setFilteredProducts(withoutAllergens);
-  }, [userFilter]);
+  }, [userFilter, products]);
 
   return (
     filteredProducts && (
