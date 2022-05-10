@@ -14,12 +14,17 @@ function Cards() {
     useContext(ProductContext);
 
   React.useEffect(() => {
-    const withoutAllergens = filteredProducts.filter((p) => {
+    const withoutAllergens = products.filter((p) => {
       let hasAllergen = false;
 
       if (userFilter.length > 0 && p.ingredients_text_with_allergens_fr) {
         userFilter.forEach((a) => {
-          hasAllergen = hasAllergen || p.ingredients_text.includes(a);
+          hasAllergen =
+            hasAllergen ||
+            p.ingredients_text_with_allergens_fr
+              .replace("œ", "oe")
+              .toLowerCase()
+              .includes(a);
         });
       }
       console.log(hasAllergen);
