@@ -8,19 +8,23 @@ import Card from "@components/Card";
 import MoreProductsButton from "@components/MoreProductsButton";
 import ProductContext from "../contexts/ProductContext";
 import ArrowTop from "./ArrowTop";
-import MoreProductsButton from "./MoreProductsButton";
 
 function Cards() {
   const { filteredProducts, setFilteredProducts, userFilter, products } =
     useContext(ProductContext);
 
   React.useEffect(() => {
-    const withoutAllergens = filteredProducts.filter((p) => {
+    const withoutAllergens = products.filter((p) => {
       let hasAllergen = false;
 
       if (userFilter.length > 0 && p.ingredients_text_with_allergens_fr) {
         userFilter.forEach((a) => {
-          hasAllergen = hasAllergen || p.ingredients_text.includes(a);
+          hasAllergen =
+            hasAllergen ||
+            p.ingredients_text
+              .replace("œ", "oe")
+              .toLowerCase()
+              .includes(a.toLowerCase());
         });
       }
       console.log(hasAllergen);
