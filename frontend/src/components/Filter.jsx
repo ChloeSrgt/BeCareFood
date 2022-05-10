@@ -25,7 +25,7 @@ function Filter() {
           showCheckboxes ? "allergenCheckboxOn" : "allergenCheckboxOff"
         }
       >
-        <div>
+        <div className="allcheckboxes">
           {allergens.map((element) => (
             <AllergenCheckbox key={element.id} allergen={element} />
           ))}

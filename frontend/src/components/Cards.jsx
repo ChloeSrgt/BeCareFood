@@ -21,7 +21,7 @@ function Cards() {
         userFilter.forEach((a) => {
           hasAllergen =
             hasAllergen ||
-            p.ingredients_text_with_allergens_fr
+            p.ingredients_text
               .replace("œ", "oe")
               .toLowerCase()
               .includes(a.toLowerCase());

@@ -16,19 +16,17 @@ function AllergenCheckbox({ allergen }) {
   }
 
   return (
-    <div className="allcheckboxes">
-      <li key={allergen.id}>
-        <input
-          className="checkbox"
-          type="checkbox"
-          id={`${allergen.id}`}
-          name={allergen.name}
-          value={allergen.searchTerm}
-          onChange={(e) => handleChange(e)}
-        />
-        <label htmlFor={`${allergen.id}`}>{allergen.name}</label>
-      </li>
-    </div>
+    <li key={allergen.id}>
+      <input
+        className="checkbox"
+        type="checkbox"
+        id={`${allergen.id}`}
+        name={allergen.name}
+        value={allergen.searchTerm}
+        onChange={(e) => handleChange(e)}
+      />
+      <label htmlFor={`${allergen.id}`}>{allergen.name}</label>
+    </li>
   );
 }
 export default AllergenCheckbox;

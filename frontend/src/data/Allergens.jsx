@@ -27,7 +27,7 @@ export const allergens = [
   },
   {
     id: 6,
-    name: "soja",
+    name: "Soja",
     searchTerm: "soja",
   },
   {
