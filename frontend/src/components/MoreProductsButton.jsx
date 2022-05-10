@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import ProductContext from "../contexts/ProductContext";
 import Loading from "./Loading";
+import "./MoreProductsButton.css";
 
 function MoreProductsButton() {
   const { setProducts, searchValue } = useContext(ProductContext);

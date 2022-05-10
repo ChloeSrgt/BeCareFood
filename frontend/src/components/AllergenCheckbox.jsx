@@ -1,6 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
 import { allergens } from "../data/Allergens";
+import "./AllergenCheckboxes.css";
 
 function AllergenCheckbox() {
   return (

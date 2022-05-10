@@ -5,6 +5,7 @@ import "./Cards.css";
 import Card from "@components/Card";
 import ProductContext from "../contexts/ProductContext";
 import ArrowTop from "./ArrowTop";
+import MoreProductsButton from "./MoreProductsButton";
 
 function Cards() {
   const { products } = useContext(ProductContext);
