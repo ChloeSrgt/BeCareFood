@@ -18,6 +18,7 @@
 
 .search img {
   height: 40px;
+  cursor: pointer;
 }
 
 /*-----------VERSION TABLETTE-------------------*/
