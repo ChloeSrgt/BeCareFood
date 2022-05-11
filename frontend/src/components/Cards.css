@@ -1,0 +1,46 @@
+.productCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.productCard .goTop {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 50px;
+}
+
+.productCard li {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 45vw;
+  height: 64vw;
+  margin-bottom: 6vw;
+  border: 2px solid;
+  border-radius: 8px;
+  background-color: var(--light-beige);
+  color: var(--flashy-orange);
+}
+
+.productCard .productImg {
+  width: 30vw;
+  height: 35vw;
+  margin-top: 6vw;
+}
+
+.moreProductsButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*-----------VERSION TABLETTE-------------------*/
+
+@media screen and (min-width: 768px) {
+  .productCard li {
+    font-size: 2rem;
+  }
+}

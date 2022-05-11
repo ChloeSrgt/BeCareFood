@@ -1,0 +1,36 @@
+.search {
+  display: flex;
+  border-radius: 30px;
+  border: solid;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  margin-left: 10px;
+  font-size: 20px;
+  outline: none;
+}
+
+.search img {
+  height: 40px;
+  cursor: pointer;
+}
+
+/*-----------VERSION TABLETTE-------------------*/
+
+@media screen and (min-width: 768px) {
+  .search {
+    width: 65vw;
+    border-radius: 38px;
+  }
+
+  .search img {
+    height: 52px;
+    margin-top: 2px;
+  }
+}

@@ -1,0 +1,12 @@
+.contact-container h1 {
+  margin-top: 5vh;
+  text-align: center;
+  color: var(--light-green);
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container h1 {
+    font-size: 3rem;
+  }
+}

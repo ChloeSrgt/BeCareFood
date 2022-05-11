@@ -1,0 +1,43 @@
+footer {
+  background-color: var(--dark-green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  padding: 20px;
+  color: var(--light-beige);
+}
+
+footer img {
+  width: 30px;
+}
+
+footer div {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.basdepage {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+/*-----------VERSION TABLETTE-------------------*/
+
+@media screen and (min-width: 768px) {
+  footer div {
+    width: 15%;
+  }
+  footer {
+    font-size: 25px;
+  }
+  .basdepage {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 10vh;
+  }
+}
