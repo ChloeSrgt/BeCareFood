@@ -30,7 +30,9 @@ export default function Card({ product }) {
       <p>
         <p className="infoprod">
           {" "}
-          {product.brands} - {product.product_name}
+          {product.ingredients_text_with_allergens_fr
+            ? `${product.brands} - ${product.product_name}`
+            : "Pas d'ingrédient communiqué"}
         </p>
       </p>
     </li>
