@@ -4,11 +4,17 @@ import ProductContext from "../contexts/ProductContext";
 import "./Header.css";
 
 function Header() {
-  const { setProducts } = useContext(ProductContext);
+  const { setProducts, setSearchValue } = useContext(ProductContext);
 
   return (
     <header>
-      <Link to="/" onClick={() => setProducts([])}>
+      <Link
+        to="/"
+        onClick={() => {
+          setSearchValue("");
+          setProducts([]);
+        }}
+      >
         <img src="src/assets/logo.png" alt="logo" />
       </Link>
       <Link to="/" onClick={() => setProducts([])}>

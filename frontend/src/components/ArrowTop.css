@@ -3,16 +3,16 @@
 }
 .icon-position {
   position: fixed;
-  bottom: 40px;
-  right: 25px;
+  bottom: 20px;
+  right: 10px;
   z-index: 20;
 }
 .icon-style {
   background-color: var(--primary-color);
   border: 6px solid #ff632e;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   color: #ff632e;
   cursor: pointer;
 
