@@ -13,7 +13,6 @@ function SearchBar() {
   const [isNotFound, setIsNotFound] = useState(false);
   const { setProducts, searchValue, setSearchValue, setFilteredProducts } =
     useContext(ProductContext);
-
   const getProduct = () => {
     setIsLoading(true);
     // setProducts([]);
