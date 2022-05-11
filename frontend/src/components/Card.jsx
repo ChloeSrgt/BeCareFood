@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductContext from "../contexts/ProductContext";
 import "./Card.css";
+import plate from "../assets/plate.jpg";
 
 export default function Card({ product }) {
   const { setOneProduct } = useContext(ProductContext);
@@ -24,7 +25,11 @@ export default function Card({ product }) {
     >
       <img
         className="productImg"
-        src={product.image_front_small_url}
+        src={
+          product.image_front_small_url
+            ? `${product.image_front_small_url}`
+            : `${plate}`
+        }
         alt="Product"
       />
       <p>
