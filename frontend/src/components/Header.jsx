@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import ProductContext from "../contexts/ProductContext";
 import "./Header.css";
+import logo from "../assets/logo.png";
 
 function Header() {
   const { setProducts, setSearchValue, setUserFilter } =
@@ -17,7 +18,7 @@ function Header() {
           setUserFilter([]);
         }}
       >
-        <img src="src/assets/logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
       </Link>
       <Link
         to="/"

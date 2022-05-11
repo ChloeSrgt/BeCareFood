@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import ProductContext from "../contexts/ProductContext";
 import Loading from "./Loading";
 import NotFound from "./NotFound";
+import search from "../assets/search.png";
 
 function SearchBar() {
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +49,7 @@ function SearchBar() {
             }
           }}
         />
-        <img src="src/assets/search.png" alt="loupe" onClick={getProduct} />
+        <img src={search} alt="loupe" onClick={getProduct} />
       </form>
       {isNotFound && <NotFound />}
       {isLoading && <Loading />}
